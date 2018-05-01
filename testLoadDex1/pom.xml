@@ -1,0 +1,39 @@
+<project>
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>featurea</groupId>
+    <artifactId>testLoadDex1</artifactId>
+    <version>1</version>
+    <packaging>apk</packaging>
+
+    <dependencies>
+        <dependency>
+            <groupId>com.google.android</groupId>
+            <artifactId>android</artifactId>
+            <version>4.4</version>
+            <scope>provided</scope>
+        </dependency>
+        <dependency>
+            <groupId>featurea</groupId>
+            <artifactId>android</artifactId>
+            <version>1</version>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <finalName>${project.artifactId}</finalName>
+        <plugins>
+            <plugin>
+                <groupId>com.simpligility.maven.plugins</groupId>
+                <artifactId>android-maven-plugin</artifactId>
+                <configuration>
+                    <proguard>
+                        <skip>${skipObfuscation}</skip>
+                        <config>../proguard.cfg</config>
+                    </proguard>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
