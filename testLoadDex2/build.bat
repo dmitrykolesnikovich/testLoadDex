@@ -20,7 +20,7 @@ REM Define dx
 SET ANDROID_DX="%ANDROID_HOME%\build-tools\25.0.3\dx.bat"  --dex
 
 REM Define Java compiler command
-SET JAVAC=javac.exe -source 1.7 -target 1.7 -classpath "%ANDROID_JAR%;..\testLoadDex\testLoadDex1\target\classes"
+SET JAVAC=javac.exe -source 1.7 -target 1.7 -classpath "%ANDROID_JAR%;..\testLoadDex1\target\classes"
 SET JAVAC_BUILD=%JAVAC% -sourcepath "src" -d "bin"
 
 REM Compile sources. All *.class files will be put into the bin folder
